@@ -14,12 +14,16 @@ export default (state = initialState, action) => {
     case INCREMENT:
     // Fill in the body of this case
       return {
-        count: state.count + 1
+        ...state,
+        count: action.payload
+
       }
     case DECREMENT:
     // Fill in the body of this case
       return {
-        count: state.count - 1
+        ...state,
+        count: action.payload
+
       }
     default:
       return state;
